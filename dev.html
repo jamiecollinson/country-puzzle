@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Country Puzzle - dev page</title>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=all" rel="stylesheet" type="text/css">
+    <style>
+      html, body, #map {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #title {
+        position: absolute;
+        left: 50%;
+        margin-left: -130px;
+        top: 0;
+        font-family: 'Open Sans', Arial;
+        font-weight: bold;
+        background: #fff;
+        z-index: 100;
+        padding: 5px;
+        border: 1px solid #ccc;
+        user-select: none;
+      }
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=geometry"></script>
+    <script src="maplabel-compiled.js"></script>
+    <script src="country-puzzle.js"></script>
+    <script>
+        $(document).ready(function () {            
+            init('map', true);
+        });
+    </script>
+  </head>
+  <body>
+    <div id="title">Enter <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Officially_assigned_code_elements">3 letter country code:</a></div>
+    <div id="map"></div>
+  </body>
+</html>
